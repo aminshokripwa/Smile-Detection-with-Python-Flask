@@ -27,9 +27,9 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "image",
+							"key": "imagefile",
 							"type": "file",
-							"src": "/C:/Users/M.Amin/Desktop/Golang API/Python/Smile-Detection-with-Python-OpenCV-and-Deep-Learning-main/images/6.jpg"
+							"src": "/C:/Users/M.Amin/Desktop/interview/1637857009700.jpg"
 						}
 					]
 				},

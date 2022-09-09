@@ -15,15 +15,15 @@ model = load_model("model")
 
 @app.route('/api/v1/face', methods=['POST'])
 def test():
-    f = request.files.get('image')
+    f = request.files.get('imagefile')
     if f is None:
         return '["message": "Please Upload an image","status": false]"', 422
     if f.filename.split('.')[0] != 'jpg' and f.filename.split('.')[0] == 'jpeg' :
         return '["message": "Please upload only jpg file","status": false]"', 422
 
     #upload image to server
-    imagefile = request.files.get('imagefile')
-    imagefile.save('./image.jpg')
+    #imagefile = request.files.get('imagefile')
+    f.save('./image.jpg')
     # load the image, resize it, and convert it to grayscale
     image = cv2.imread("./image.jpg")
     image = cv2.resize(image, (width, height))
